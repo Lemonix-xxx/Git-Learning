@@ -13,7 +13,13 @@ cat id_rsa.pub
 ```
 
 - 初始化
-> git init
+```bash
+git init
+# 手动mkdir并进入
+
+git init 目录
+# 自动给你mkdir
+```
 
 
 ## 远程
@@ -45,6 +51,14 @@ cat id_rsa.pub
 
 - 添加修改文件
 > git add 文件名
+
+- 撤销
+```bash
+git checkout -- 文件名
+#      两边各一个空格
+# 如果该文件还没有提交到暂存区，则恢复到版本库
+# 如果该文件提交到了暂存区，则
+```
 
 - 把暂存区都提交到版本库中
 > git commit -m "更新内容"
