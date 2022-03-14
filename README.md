@@ -135,7 +135,7 @@ git switch -c 分支名
 ```
 
 - 切换分支
-```
+```bash
 # 第一种
 git checkout 分支名
 
