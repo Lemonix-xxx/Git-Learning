@@ -1,9 +1,15 @@
 # Lemonix的Git教程
+
 既是给大家学习的教程，也是我的学习历程
 
-_2022.3.14更新_
+_2022.3.15更新_
 
 Git仓库网站: [Github](github.com)  [Gitee](gitee.com)
+
+各个系统的操作大同小异，我只以Linux为主演示，
+Windows用户可以选择安装WSL或者Git Bash来获得更好的体验！
+
+本教程多数整理自廖雪峰老师的[教程](https://www.liaoxuefeng.com/wiki/896043488029600)
 
 ---
 
@@ -25,7 +31,7 @@ cat id_rsa.pub
 - 初始化
 ```bash
 git init
-# 手动mkdir并进入
+# 使用前需手动mkdir并进入
 
 git init 目录
 # 自动给你mkdir
@@ -107,6 +113,9 @@ git reset --hard 版本
 
 ## 分支
 
+**分支可以用来进行协同工作，
+比如开发版、测试版和稳定版**
+
 - 创建分支
 ```bash
 # 第一种
@@ -151,6 +160,7 @@ git switch 分支名
 - 删除分支
 > `git checkout -d 分支名`
 
+
 ## 常见问题
 
 - 第一次`git push`和`git clone`时出现警告怎么办？
@@ -164,6 +174,7 @@ Are you sure you want to continue connecting (yes/no)?*
 > `git rm`会从版本库中删除文件，`rm`只从本地删除，想从版本库删除还要先add。
 >
 > `git rm`想要恢复需要`git reset HEAD`，直接`rm`的话需要`git checkout -- 文件名`来恢复。
+
 
 ## 翻译参考
 - Branch -> 分支
