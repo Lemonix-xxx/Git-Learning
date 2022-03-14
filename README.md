@@ -1,11 +1,12 @@
 # Lemonix的Git教程
 既是给大家学习的教程，也是我的学习历程
 
-_2022.3.13更新_
+_2022.3.14更新_
 
 Git仓库网站: [Github](github.com)  [Gitee](gitee.com)
 
-***
+---
+
 
 ## 准备
 
@@ -103,6 +104,48 @@ git reset --hard 版本
 - 查看回退记录
 > `git reflog`
 
+
+## 分支
+
+- 创建分支
+```bash
+# 第一种
+git branch 分支名
+
+# 第二种
+git checkout -b 分支名
+# 这种会创建并切换到此分支
+
+# 第三种
+git switch -c 分支名
+# 同第二种
+
+# 二三是一样的，
+# 只是checkout也用于撤销操作,
+# 容易搞混
+```
+
+- 切换分支
+```
+# 第一种
+git checkout 分支名
+
+# 第二种
+git switch 分支名
+
+# 一二是一样的，
+# 原因同上
+```
+
+- 与当前所在分支合并
+> `git merge 分支名`
+
+- 查看分支
+> `git branch`
+
+- 删除分支
+> `git checkout -d 分支名`
+
 ## 常见问题
 
 - 第一次`git push`和`git clone`时出现警告怎么办？
@@ -114,6 +157,7 @@ Are you sure you want to continue connecting (yes/no)?*
 
 - `git rm`和`rm`的区别
 > `git rm`会从版本库中删除文件，`rm`只从本地删除，想从版本库删除还要先add。
+>
 > `git rm`想要恢复需要`git reset HEAD`，直接`rm`的话需要`git checkout -- 文件名`来恢复。
 
 ## 翻译参考
@@ -124,6 +168,8 @@ Are you sure you want to continue connecting (yes/no)?*
 - Merge -> 合并
 - Repository -> 仓库
 - Push -> 推送
+- Checkout -> 切换
+- Switch -> 切换
 - Commit -> 提交
 - Stage -> 暂存区
 - Add -> 添加；暂存
