@@ -1,5 +1,6 @@
 # Lemonix的Git教程
 既是给大家学习的教程，也是我的学习历程
+
 _2022.3.13更新_
 
 Git仓库网站: [Github](github.com)  [Gitee](gitee.com)
@@ -37,6 +38,7 @@ git init 目录
 
 - 绑定远程仓库
 > `git remote add origin 地址`
+>
 > 地址格式: git@网站:仓库地址.git
 
 - 查看远程仓库
@@ -47,6 +49,7 @@ git init 目录
 
 - 推送到当前分支
 > `git push origin 分支`
+>
 > **注:** 第一次push要在push后加 *-u*，这样就把本地master分支和远程master分支关联了起来，方便以后操作
 
 - 与本地分支合并
@@ -103,9 +106,10 @@ git reset --hard 版本
 ## 常见问题
 
 - 第一次`git push`和`git clone`时出现警告怎么办？
-> `The authenticity of host 'github.com (xx.xx.xx.xx)' can't be established.
+> *The authenticity of host 'github.com (xx.xx.xx.xx)' can't be established.
 RSA key fingerprint is xx.xx.xx.xx.xx.
-Are you sure you want to continue connecting (yes/no)?`
+Are you sure you want to continue connecting (yes/no)?*
+>
 > 这是让你确定是否信任该Key，以防有人冒充Github或者Gitee服务器。
 
 - `git rm`和`rm`的区别
