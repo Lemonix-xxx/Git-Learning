@@ -2,7 +2,7 @@
 
 既是给大家学习的教程，也是我的学习历程
 
-_2022.3.15更新_
+_2022.3.30更新_
 
 Git仓库网站: [Github](github.com)  [Gitee](gitee.com)
 
@@ -44,7 +44,9 @@ git init 目录
 > `git clone 地址`
 
 - 绑定远程仓库
-> `git remote add origin 地址`
+> `git remote add 别名 地址`
+>
+> `别名`一般约定俗成地写成origin，习惯就好
 >
 > 地址格式: git@网站:仓库地址.git
 
@@ -52,18 +54,23 @@ git init 目录
 > `git remote -v`
 
 - 删除远程仓库
-> `git remote rm origin`
+> `git remote rm 别名`
 
 - 推送到当前分支
-> `git push origin 分支`
+> `git push 别名 分支`
 >
-> **注:** 第一次push要在push后加 *-u*，这样就把本地master分支和远程master分支关联了起来，方便以后操作
+> **注:** 第一次push要在push后加 *-u*，这样就把本地分支和远程分支关联了起来，方便以后操作
 
-- 拉取并与本地分支合并
-> `git pull origin 分支`
+- 获取并与本地分支合并
+> `git pull 别名 分支`
+>
+> 但是执行后，本地不会出现任何文件，需要再输入`git switch 分支`
 
-- 获取远程分支 (不合并)
-> `git fetch origin 分支`
+- 获取所有远程分支
+> `git pull`
+
+- 拉取远程分支 (不合并)
+> `git fetch 别名 分支`
 
 
 ## 工作区和暂存区
@@ -99,6 +106,10 @@ git reset HEAD 文件名
 
 - 查看提交记录
 > `git log`
+>
+> 加上`--graph`参数可以看到分支合并图
+>
+> 加上`--pretty=oneline`可以让其显示在一起，而不是Vim模式
 
 - 回退 (版本库)
 ```bash
@@ -175,11 +186,14 @@ Are you sure you want to continue connecting (yes/no)?*
 >
 > `git rm`想要恢复需要`git reset HEAD`，直接`rm`的话需要`git checkout -- 文件名`来恢复。
 
+- 出现合并冲突怎么解决
+> 需要手动解决冲突，也就是改变其中一个冲突。
+
 
 ## 翻译参考
 - Branch -> 分支
-- Pull -> 拉取
-- Fetch -> 获取
+- Pull -> 获取
+- Fetch -> 拉取
 - Remote -> 远程
 - Merge -> 合并
 - Repository -> 仓库
